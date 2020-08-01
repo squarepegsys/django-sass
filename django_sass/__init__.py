@@ -6,7 +6,7 @@ import sass
 from io import open
 
 
-def find_static_paths() -> List[str]:
+def find_static_paths():
     """
     Finds all static paths available in this Django project.
 
@@ -23,7 +23,7 @@ def find_static_paths() -> List[str]:
     return found_paths
 
 
-def find_static_scss() -> List[str]:
+def find_static_scss():
     """
     Finds all static scss files available in this Django project.
 
@@ -46,7 +46,7 @@ def compile_sass(
     precision: int = None,
     source_map: bool = False,
     include_paths: List[str] = None,
-) -> None:
+):
     """
     Calls sass.compile() within context of Django's known static file paths,
     and writes output CSS and/or sourcemaps to file.

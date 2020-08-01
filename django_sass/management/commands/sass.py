@@ -38,11 +38,7 @@ class Command(BaseCommand):
             help="Output type. One of 'expanded', 'nested', 'compact', 'compressed'",
         )
         parser.add_argument(
-            "-p",
-            type=int,
-            dest="p",
-            default=8,
-            help="Precision. Defaults to 8",
+            "-p", type=int, dest="p", default=8, help="Precision. Defaults to 8",
         )
         parser.add_argument(
             "--watch",
@@ -52,7 +48,7 @@ class Command(BaseCommand):
             help="Watch input path and re-generate css files when scss files are changed.",
         )
 
-    def handle(self, *args, **options) -> None:
+    def handle(self, *args, **options):
         """
         Finds all static paths used by the project, and runs sass
         including those paths.
