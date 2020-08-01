@@ -1,4 +1,3 @@
-from typing import Dict, List
 import os
 
 from django.contrib.staticfiles.finders import get_finders
@@ -40,12 +39,12 @@ def find_static_scss():
 
 
 def compile_sass(
-    inpath: str,
-    outpath: str,
-    output_style: str = None,
-    precision: int = None,
-    source_map: bool = False,
-    include_paths: List[str] = None,
+    inpath,
+    outpath,
+    output_style=None,
+    precision=None,
+    source_map=False,
+    include_paths=None,
 ):
     """
     Calls sass.compile() within context of Django's known static file paths,
@@ -103,7 +102,7 @@ def compile_sass(
         output_style=output_style,
         precision=precision,
         include_paths=include_paths,
-        **sassargs,
+        **sassargs
     )
 
     # Write output.
